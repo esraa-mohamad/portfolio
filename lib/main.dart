@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/portfolio_app.dart';
+import 'portfolio_app.dart';
+import 'core/routes/app_routing.dart';
 
 void main() {
-  runApp(const PortfolioApp());
+  runApp( PortfolioApp(appRouting: AppRouting(),));
 }
 
 
