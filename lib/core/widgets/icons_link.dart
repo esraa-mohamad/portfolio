@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/core/helper/app_functions.dart';
 import 'package:portfolio/core/helper/app_images.dart';
+import 'package:portfolio/core/models/icon_link_model.dart';
 
 class IconsLink extends StatefulWidget {
   const IconsLink({super.key});
@@ -10,23 +11,12 @@ class IconsLink extends StatefulWidget {
 }
 
 class _IconsLinkState extends State<IconsLink> {
-  List<Map> profiles = [
-    {
-      'icon': AppImages.githubIcon,
-      'url': 'https://github.com/esraa-mohamad',
-    },
-    {
-      'icon': AppImages.linkedinIcon,
-      'url':'https://www.linkedin.com/in/esraa-mohamed-36759b231/',
-    },
-    {
-      'icon': AppImages.facebookIcon,
-      'url': 'https://www.facebook.com/profile.php?id=100017357289011',
-    },
-    {
-      'icon': AppImages.whatsappIcon,
-      'url': 'https://api.whatsapp.com/qr/QKKOOGJZDLAKI1?autoload=1&app_absent=0',
-    },
+  List<IconLinkModel> profiles = [
+    IconLinkModel(iconPath: AppImages.cvIcon, urlPath: 'https://drive.google.com/file/d/1OhJrHrej5Pt4qN5Nx4EAhWmZ3s5C6_Mu/view?usp=sharing',),
+    IconLinkModel(iconPath: AppImages.githubIcon, urlPath: 'https://github.com/esraa-mohamad',),
+    IconLinkModel(iconPath: AppImages.linkedinIcon, urlPath: 'https://www.linkedin.com/in/esraa-mohamed-36759b231/',),
+    IconLinkModel(iconPath: AppImages.facebookIcon, urlPath: 'https://www.facebook.com/profile.php?id=100017357289011',),
+    IconLinkModel(iconPath: AppImages.whatsappIcon, urlPath: 'https://api.whatsapp.com/qr/QKKOOGJZDLAKI1?autoload=1&app_absent=0',),
   ];
 
   @override
@@ -35,9 +25,9 @@ class _IconsLinkState extends State<IconsLink> {
       children: List.generate(
         profiles.length,
         (index) => iconLink(
-          iconPath: profiles[index]['icon'],
+          iconPath: profiles[index].iconPath,
           ontTap: (){
-            AppFunctions.launchLinks(profiles[index]['url']);
+            AppFunctions.launchLinks(profiles[index].urlPath);
           },
         ),
       ),

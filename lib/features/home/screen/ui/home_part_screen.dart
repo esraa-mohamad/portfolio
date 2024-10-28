@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:portfolio/core/widgets/icons_link.dart';
+import 'package:portfolio/features/home/screen/widgets/download_cv_file.dart';
 import 'package:portfolio/features/home/screen/widgets/home_image.dart';
 import 'package:portfolio/features/home/screen/widgets/home_name_and_logo.dart';
 import 'package:portfolio/features/home/screen/widgets/home_tab_bar.dart';
@@ -41,7 +42,13 @@ class HomePartScreen extends StatelessWidget {
            SizedBox(
             height: 30.h,
           ),
-          const IconsLink(),
+          const Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              IconsLink(),
+              DownloadCvFile()
+            ],
+          ),
           SizedBox(
             height: 40.h,
           ),
