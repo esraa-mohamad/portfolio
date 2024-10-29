@@ -5,11 +5,14 @@ import '../widgets/projects_list.dart';
 
 
 class ProjectsPartScreen extends StatelessWidget {
-  const ProjectsPartScreen({super.key});
+  const ProjectsPartScreen({super.key, required this.globalKey});
+
+  final GlobalKey  globalKey;
 
   @override
   Widget build(BuildContext context) {
     return Container(
+      key: globalKey,
       width: double.infinity,
       color: Colors.white,
       padding:  EdgeInsets.symmetric(

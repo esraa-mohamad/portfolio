@@ -7,11 +7,13 @@ import 'package:portfolio/core/theme/font_family_helper.dart';
 import 'package:portfolio/features/contact/screen/widgets/contact_info.dart';
 
 class ContactPartScreen extends StatelessWidget {
-  const ContactPartScreen({super.key});
+  const ContactPartScreen({super.key, required this.globalKey});
+  final GlobalKey  globalKey;
 
   @override
   Widget build(BuildContext context) {
     return Container(
+      key: globalKey,
       width: double.infinity,
       padding: EdgeInsets.symmetric(
         horizontal: MediaQuery.of(context).size.width *0.02,

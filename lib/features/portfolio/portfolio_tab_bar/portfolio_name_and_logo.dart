@@ -3,8 +3,8 @@ import 'package:portfolio/core/helper/app_images.dart';
 import 'package:portfolio/core/theme/app_text_styles.dart';
 import 'package:portfolio/core/theme/font_family_helper.dart';
 
-class HomeNameAndLogo extends StatelessWidget {
-  const HomeNameAndLogo({super.key});
+class PortfolioNameAndLogo extends StatelessWidget {
+  const PortfolioNameAndLogo({super.key});
 
   @override
   Widget build(BuildContext context) {

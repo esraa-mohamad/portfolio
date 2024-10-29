@@ -5,11 +5,13 @@ import 'package:portfolio/features/about/screen/widgets/quotes.dart';
 import 'package:portfolio/features/about/screen/widgets/skills.dart';
 
 class AboutPartScreen extends StatelessWidget {
-  const AboutPartScreen({super.key});
+  const AboutPartScreen({super.key, required this.globalKey});
+  final GlobalKey  globalKey;
 
   @override
   Widget build(BuildContext context) {
     return Container(
+      key: globalKey,
       width: double.infinity,
       color: Colors.grey[300],
       padding:  EdgeInsets.symmetric(
