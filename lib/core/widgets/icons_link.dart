@@ -12,7 +12,6 @@ class IconsLink extends StatefulWidget {
 
 class _IconsLinkState extends State<IconsLink> {
   List<IconLinkModel> profiles = [
-    IconLinkModel(iconPath: AppImages.cvIcon, urlPath: 'https://drive.google.com/file/d/1OhJrHrej5Pt4qN5Nx4EAhWmZ3s5C6_Mu/view?usp=sharing',),
     IconLinkModel(iconPath: AppImages.githubIcon, urlPath: 'https://github.com/esraa-mohamad',),
     IconLinkModel(iconPath: AppImages.linkedinIcon, urlPath: 'https://www.linkedin.com/in/esraa-mohamed-36759b231/',),
     IconLinkModel(iconPath: AppImages.facebookIcon, urlPath: 'https://www.facebook.com/profile.php?id=100017357289011',),

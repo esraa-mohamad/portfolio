@@ -17,6 +17,20 @@ class AppFunctions{
       throw Exception('Could not launch $url');
     }
   }
+  static Future<void> launchEmail({
+    required String email,
+  }) async {
+    final Uri emailUri = Uri(
+      scheme: 'mailto',
+      path: email,
+    );
+
+    if (await canLaunchUrl(emailUri)) {
+      await launchUrl(emailUri);
+    } else {
+      throw Exception('Could not launch $emailUri');
+    }
+  }
 
   static Future<bool> downloadFile(BuildContext context) async {
     String pdfUrl =

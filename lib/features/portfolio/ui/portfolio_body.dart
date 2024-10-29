@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/features/about/screen/ui/about_part_screen.dart';
+import 'package:portfolio/features/contact/screen/ui/contact_part_screen.dart';
 import 'package:portfolio/features/home/screen/ui/home_part_screen.dart';
 
 import '../../projects/screen/project_screen/ui/projects_part_screen.dart';
@@ -15,6 +16,7 @@ class PortfolioBody extends StatelessWidget {
           HomePartScreen(),
           AboutPartScreen(),
           ProjectsPartScreen(),
+          ContactPartScreen(),
         ],
       ),
     );
