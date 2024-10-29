@@ -140,4 +140,15 @@ class AppTextStyles {
     fontWeight: FontWeightHelper.bold,
     color: Colors.black,
   );
+  static TextStyle font40WhiteBold = const TextStyle(
+    fontSize: 40,
+    fontWeight: FontWeightHelper.bold,
+    color: Colors.white,
+  );
+
+  static TextStyle font30WhiteBold = const TextStyle(
+    fontSize: 30,
+    fontWeight: FontWeightHelper.bold,
+    color: Colors.white,
+  );
 }
