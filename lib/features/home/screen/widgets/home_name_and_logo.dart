@@ -14,24 +14,24 @@ class HomeNameAndLogo extends StatelessWidget {
           children: [
             Text(
               'Esraa Mohamed',
-              style: AppTextStyles.font6BlackBold
+              style: AppTextStyles.font22BlackBold
                   .copyWith(fontFamily: FontFamilyHelper.dynaPuffFont),
             ),
             Text(
               'Flutter Developer',
-              style: AppTextStyles.font3GreyRegular
+              style: AppTextStyles.font10GreyRegular
                   .copyWith(fontFamily: FontFamilyHelper.poppinsFont),
             ),
           ],
         ),
         Text(
-          '|',
-          style: AppTextStyles.font20BlackBold,
+          '  |',
+          style: AppTextStyles.font35BlackBold,
         ),
         Image.asset(
           AppImages.womanCodeLogo,
-          height: 150,
-          width: 100,
+          height: MediaQuery.of(context).size.height /7,
+          width: MediaQuery.of(context).size.width /15,
         )
       ],
     );

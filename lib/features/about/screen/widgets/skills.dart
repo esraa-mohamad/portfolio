@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:portfolio/core/theme/app_text_styles.dart';
 import 'package:portfolio/core/theme/font_family_helper.dart';
 import 'package:portfolio/features/about/screen/widgets/about_titles.dart';
@@ -30,39 +29,41 @@ class Skills extends StatelessWidget {
     'C++',
     'Python',
     'Java',
-    'SQL'
+    'SQL',
+    'HTML',
+    'CSS',
+    'Figma',
   ];
 
   @override
   Widget build(BuildContext context) {
-    // Shuffling the skills list for a unique order every time
     final shuffledSkills = [...skills]..shuffle();
-    int index =0;
+    int index = 0;
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         const AboutTitles(title: 'Skills'),
         SizedBox(
-          height: 20.h,
+          height: MediaQuery.of(context).size.height * 0.1,
         ),
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisAlignment: MainAxisAlignment.start,
           children: List.generate(
             5,
-            (rowIndex) {
+                (rowIndex) {
               return Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: List.generate(
                   5,
-                  (colIndex) {
+                      (colIndex) {
                     // Ensure we don’t exceed the list length
                     if (index >= shuffledSkills.length) index = 0;
                     return Padding(
                       padding:  EdgeInsets.symmetric(
-                          horizontal: 10.w ,
-                          vertical: 8.h
+                          horizontal:MediaQuery.of(context).size.width * 0.03,
+                          vertical: MediaQuery.of(context).size.height * 0.02
                       ),
                       child: skillsTitle(
                         skills[index++],
@@ -80,7 +81,7 @@ class Skills extends StatelessWidget {
 
   Widget skillsTitle(String skill) {
     return Container(
-      padding: EdgeInsets.symmetric(horizontal: 6.w, vertical: 4.h),
+      padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 12),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(15),
         color: Colors.grey[500],
@@ -88,7 +89,7 @@ class Skills extends StatelessWidget {
       child: Center(
         child: Text(
           skill,
-          style: AppTextStyles.font4WhiteSemiBold
+          style: AppTextStyles.font16WhiteSemiBold
               .copyWith(fontFamily: FontFamilyHelper.poppinsFont),
         ),
       ),

@@ -14,7 +14,7 @@ class Quotes extends StatelessWidget {
         children: [
           Text(
             "\"I’m not a great programmer; I’m just a good programmer with great habits.\"",
-            style: AppTextStyles.font10BlueBold.copyWith(
+            style: AppTextStyles.font30BlueBold.copyWith(
               fontFamily: FontFamilyHelper.caveatFont,
             ),
           ),
@@ -22,7 +22,7 @@ class Quotes extends StatelessWidget {
             alignment: AlignmentDirectional.centerEnd,
             child: Text(
               '___Kent Beck___',
-              style: AppTextStyles.font6BlackBold.copyWith(
+              style: AppTextStyles.font25BlackBold.copyWith(
                 fontFamily: FontFamilyHelper.caveatFont,
               ),
             ),

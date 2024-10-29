@@ -1,88 +1,96 @@
-
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:portfolio/core/theme/app_color.dart';
 import 'package:portfolio/core/theme/font_weight_helper.dart';
 
-class AppTextStyles{
-
-  static  TextStyle font6BlackBold = TextStyle(
-    fontSize: 6.sp ,
-    fontWeight: FontWeightHelper.bold ,
-    color: Colors.black ,
+class AppTextStyles {
+  static TextStyle font22BlackBold = const TextStyle(
+    fontSize: 22,
+    fontWeight: FontWeightHelper.bold,
+    color: Colors.black,
   );
-  static  TextStyle font3GreyRegular = TextStyle(
-    fontSize: 3.sp ,
-    fontWeight: FontWeightHelper.regular ,
-    color: Colors.grey ,
+  static TextStyle font10GreyRegular = const TextStyle(
+    fontSize: 10,
+    fontWeight: FontWeightHelper.regular,
+    color: Colors.grey,
   );
-  static  TextStyle font20BlackBold = TextStyle(
-    fontSize: 12.sp ,
-    fontWeight: FontWeightHelper.bold ,
-    color: Colors.black ,
-  );
-
-  static  TextStyle font4BlackSemiBold = TextStyle(
-    fontSize: 4.sp ,
-    fontWeight: FontWeightHelper.semiBold ,
-    color: Colors.black ,
-  );
-  static  TextStyle font6BlueBold = TextStyle(
-    fontSize: 6.sp ,
-    fontWeight: FontWeightHelper.bold ,
-    color: AppColor.mainBlue ,
+  static TextStyle font35BlackBold = const TextStyle(
+    fontSize: 35,
+    fontWeight: FontWeightHelper.bold,
+    color: Colors.black38,
   );
 
-  static  TextStyle font10BlackSemiBold = TextStyle(
-    fontSize: 10.sp ,
-    fontWeight: FontWeightHelper.semiBold ,
-    color: Colors.black ,
+  static TextStyle font20BlackSemiBold = const TextStyle(
+    fontSize: 20,
+    fontWeight: FontWeightHelper.semiBold,
+    color: Colors.black,
   );
-  static  TextStyle font10BlueBold = TextStyle(
-    fontSize: 10.sp ,
-    fontWeight: FontWeightHelper.bold ,
-    color: AppColor.mainBlue ,
+  static TextStyle font20BlueBold = const TextStyle(
+    fontSize: 20,
+    fontWeight: FontWeightHelper.bold,
+    color: AppColor.mainBlue,
   );
-  static  TextStyle font6GreyMedium = TextStyle(
-    fontSize: 6.sp ,
-    fontWeight: FontWeightHelper.medium ,
-    color: Colors.grey ,
-  );
-  static  TextStyle font4LightGreyRegular = TextStyle(
-    fontSize: 4.sp ,
-    fontWeight: FontWeightHelper.regular ,
-    color: Colors.grey[300] ,
+  static TextStyle font30BlueBold = const TextStyle(
+    fontSize: 30,
+    fontWeight: FontWeightHelper.bold,
+    color: AppColor.mainBlue,
   );
 
-  static  TextStyle font8LightBlueBold = TextStyle(
-    fontSize: 8.sp ,
-    fontWeight: FontWeightHelper.bold ,
-    color: AppColor.lightBlue ,
+  static TextStyle font40BlackSemiBold = const TextStyle(
+    fontSize: 40,
+    fontWeight: FontWeightHelper.semiBold,
+    color: Colors.black,
   );
-  static  TextStyle font8BlackBold = TextStyle(
-    fontSize: 8.sp ,
-    fontWeight: FontWeightHelper.bold ,
-    color: Colors.black ,
+  static TextStyle font40BlueBold = const TextStyle(
+    fontSize: 40,
+    fontWeight: FontWeightHelper.bold,
+    color: AppColor.mainBlue,
+  );
+  static TextStyle font18GreyMedium = const TextStyle(
+    fontSize: 18,
+    fontWeight: FontWeightHelper.medium,
+    color: Colors.grey,
+  );
+  static TextStyle font14LightGreyMedium = TextStyle(
+    fontSize: 14,
+    fontWeight: FontWeightHelper.medium,
+    color: Colors.grey[300],
   );
 
-  static  TextStyle font4GreyMedium = TextStyle(
-    fontSize: 4.sp ,
-    fontWeight: FontWeightHelper.medium ,
-    color: Colors.grey ,
+  static TextStyle font30LightBlueBold = const TextStyle(
+    fontSize: 30,
+    fontWeight: FontWeightHelper.bold,
+    color: AppColor.lightBlue,
   );
-  static  TextStyle font4BlueMedium = TextStyle(
-    fontSize: 4.sp ,
-    fontWeight: FontWeightHelper.medium ,
-    color: AppColor.mainBlue ,
+
+  static TextStyle font16GreyMedium = const TextStyle(
+    fontSize: 16,
+    fontWeight: FontWeightHelper.medium,
+    color: Colors.grey,
   );
-  static  TextStyle font4WhiteSemiBold = TextStyle(
-    fontSize: 4.sp ,
-    fontWeight: FontWeightHelper.semiBold ,
-    color: Colors.white ,
+  static TextStyle font16BlueMedium = const TextStyle(
+    fontSize: 16,
+    fontWeight: FontWeightHelper.medium,
+    color: AppColor.mainBlue,
   );
-  static  TextStyle font3BlueMedium = TextStyle(
-    fontSize: 3.sp ,
-    fontWeight: FontWeightHelper.medium ,
-    color: AppColor.mainBlue ,
+  static TextStyle font16WhiteSemiBold = const TextStyle(
+    fontSize: 16,
+    fontWeight: FontWeightHelper.semiBold,
+    color: Colors.white,
+  );
+  static TextStyle font3BlueMedium = const TextStyle(
+    fontSize: 3,
+    fontWeight: FontWeightHelper.medium,
+    color: AppColor.mainBlue,
+  );
+
+  static TextStyle font25BlackBold = const TextStyle(
+    fontSize: 25,
+    fontWeight: FontWeightHelper.bold,
+    color: Colors.black,
+  );
+  static TextStyle font20BlackBold = const TextStyle(
+    fontSize: 20,
+    fontWeight: FontWeightHelper.bold,
+    color: Colors.black,
   );
 }

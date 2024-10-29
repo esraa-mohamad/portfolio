@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:portfolio/core/helper/app_images.dart';
 import 'package:portfolio/core/models/experience_data_model.dart';
 import 'package:portfolio/core/theme/app_color.dart';
@@ -44,7 +43,7 @@ class Experience extends StatelessWidget {
           title: 'Experience',
         ),
         SizedBox(
-          height: 20.h,
+          height: MediaQuery.of(context).size.height * 0.1,
         ),
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -54,13 +53,15 @@ class Experience extends StatelessWidget {
               children: List.generate(2, (colIndex) {
                 int itemIndex = rowIndex * 2 + colIndex;
                 if (itemIndex >= shuffledData.length) {
-                  return Expanded(child: Container()); // Empty widget for alignment
+                  return Expanded(
+                      child: Container()); // Empty widget for alignment
                 }
                 return Expanded(
                   child: SizedBox(
-                    width: 350.w,
-                    height: 350.h,
+                    width:MediaQuery.of(context).size.width * 0.5,
+                    height: MediaQuery.of(context).size.height * 0.6,
                     child: experienceData(
+                      context,
                       logo: data[itemIndex].iconPath,
                       title: data[itemIndex].title,
                       description: data[itemIndex].description,
@@ -76,16 +77,21 @@ class Experience extends StatelessWidget {
     );
   }
 
-  Widget experienceData({
+  Widget experienceData(
+      BuildContext context,
+      {
     required String logo,
     required String title,
     required String description,
     required String time,
   }) {
     return Padding(
-      padding: EdgeInsets.only(left: 25.w, bottom: 25.h),
+      padding: EdgeInsets.symmetric(
+        vertical: MediaQuery.of(context).size.width *0.04,
+        horizontal: MediaQuery.of(context).size.width *0.03,
+      ),
       child: Container(
-        padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 12.h),
+        padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 10),
         decoration: BoxDecoration(
             color: Colors.white,
             borderRadius: BorderRadius.circular(15),
@@ -99,7 +105,7 @@ class Experience extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Row(
-              crossAxisAlignment: CrossAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Container(
                   decoration: BoxDecoration(
@@ -108,21 +114,22 @@ class Experience extends StatelessWidget {
                         color: AppColor.mainBlue,
                         width: 2,
                       )),
-                  padding: EdgeInsets.symmetric(horizontal: 4.w, vertical: 4.h),
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
                   child: Image.asset(
                     logo,
-                    width: 40,
-                    height: 40,
+                    width: MediaQuery.of(context).size.width /30,
+                    height: MediaQuery.of(context).size.height /25,
                   ),
                 ),
                 SizedBox(
-                  width: 5.w,
+                  width:MediaQuery.of(context).size.width *0.01,
                 ),
                 Expanded(
                   child: Text(
                     title,
                     maxLines: 2,
-                    style: AppTextStyles.font8BlackBold.copyWith(
+                    style: AppTextStyles.font20BlackBold.copyWith(
                       fontFamily: FontFamilyHelper.robotoFont,
                     ),
                   ),
@@ -130,25 +137,23 @@ class Experience extends StatelessWidget {
               ],
             ),
             SizedBox(
-              height: 15.h,
+              height: MediaQuery.of(context).size.width *0.02,
             ),
-            Expanded(
-              child: Text(
-                description,
-                maxLines: 5,
-                overflow: TextOverflow.ellipsis,
-                style: AppTextStyles.font4GreyMedium,
-              ),
+            Text(
+              description,
+              maxLines: 5,
+              overflow: TextOverflow.ellipsis,
+              style: AppTextStyles.font16GreyMedium,
             ),
             SizedBox(
-              height: 20.h,
+              height: MediaQuery.of(context).size.width *0.02,
             ),
             Expanded(
               child: Align(
                 alignment: AlignmentDirectional.bottomEnd,
                 child: Text(
                   time,
-                  style: AppTextStyles.font4BlueMedium.copyWith(
+                  style: AppTextStyles.font16BlueMedium.copyWith(
                     fontFamily: FontFamilyHelper.poppinsFont,
                   ),
                 ),
