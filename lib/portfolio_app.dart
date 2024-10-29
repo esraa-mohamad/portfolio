@@ -10,6 +10,7 @@ class PortfolioApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return  ScreenUtilInit(
+      //designSize: const Size(1440, 6530),
       minTextAdapt : true,
       child: MaterialApp(
         debugShowCheckedModeBanner: false,

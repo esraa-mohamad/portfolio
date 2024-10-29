@@ -53,4 +53,36 @@ class AppTextStyles{
     fontWeight: FontWeightHelper.regular ,
     color: Colors.grey[300] ,
   );
+
+  static  TextStyle font8LightBlueBold = TextStyle(
+    fontSize: 8.sp ,
+    fontWeight: FontWeightHelper.bold ,
+    color: AppColor.lightBlue ,
+  );
+  static  TextStyle font8BlackBold = TextStyle(
+    fontSize: 8.sp ,
+    fontWeight: FontWeightHelper.bold ,
+    color: Colors.black ,
+  );
+
+  static  TextStyle font4GreyMedium = TextStyle(
+    fontSize: 4.sp ,
+    fontWeight: FontWeightHelper.medium ,
+    color: Colors.grey ,
+  );
+  static  TextStyle font4BlueMedium = TextStyle(
+    fontSize: 4.sp ,
+    fontWeight: FontWeightHelper.medium ,
+    color: AppColor.mainBlue ,
+  );
+  static  TextStyle font4WhiteSemiBold = TextStyle(
+    fontSize: 4.sp ,
+    fontWeight: FontWeightHelper.semiBold ,
+    color: Colors.white ,
+  );
+  static  TextStyle font3BlueMedium = TextStyle(
+    fontSize: 3.sp ,
+    fontWeight: FontWeightHelper.medium ,
+    color: AppColor.mainBlue ,
+  );
 }
