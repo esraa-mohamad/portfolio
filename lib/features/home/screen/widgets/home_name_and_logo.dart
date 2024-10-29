@@ -26,7 +26,7 @@ class HomeNameAndLogo extends StatelessWidget {
         ),
         Text(
           '  |',
-          style: AppTextStyles.font35BlackBold,
+          style: AppTextStyles.font35LightBlackBold,
         ),
         Image.asset(
           AppImages.womanCodeLogo,

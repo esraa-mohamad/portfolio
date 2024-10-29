@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/features/projects/screen/widgets/project_title.dart';
-import 'package:portfolio/features/projects/screen/widgets/projects_list.dart';
+
+import '../widgets/project_title.dart';
+import '../widgets/projects_list.dart';
+
 
 class ProjectsPartScreen extends StatelessWidget {
   const ProjectsPartScreen({super.key});

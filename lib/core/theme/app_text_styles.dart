@@ -13,7 +13,7 @@ class AppTextStyles {
     fontWeight: FontWeightHelper.regular,
     color: Colors.grey,
   );
-  static TextStyle font35BlackBold = const TextStyle(
+  static TextStyle font35LightBlackBold = const TextStyle(
     fontSize: 35,
     fontWeight: FontWeightHelper.bold,
     color: Colors.black38,
@@ -87,12 +87,6 @@ class AppTextStyles {
     fontWeight: FontWeightHelper.semiBold,
     color: Colors.white,
   );
-  static TextStyle font3BlueMedium = const TextStyle(
-    fontSize: 3,
-    fontWeight: FontWeightHelper.medium,
-    color: AppColor.mainBlue,
-  );
-
   static TextStyle font25BlackBold = const TextStyle(
     fontSize: 25,
     fontWeight: FontWeightHelper.bold,
@@ -106,6 +100,44 @@ class AppTextStyles {
   static TextStyle font18BlackSemiBold = const TextStyle(
     fontSize: 18,
     fontWeight: FontWeightHelper.semiBold,
+    color: Colors.black,
+  );
+
+  static TextStyle font12WhiteSemiBold = const TextStyle(
+    fontSize: 12,
+    fontWeight: FontWeightHelper.semiBold,
+    color: Colors.white,
+  );
+  static TextStyle font20WhiteBold = const TextStyle(
+    fontSize: 20,
+    fontWeight: FontWeightHelper.bold,
+    color: Colors.white,
+  );
+  static TextStyle font50BlueBold = const TextStyle(
+    fontSize: 50,
+    fontWeight: FontWeightHelper.bold,
+    color: AppColor.mainBlue,
+  );
+
+  static TextStyle font18LightBlueMedium = const TextStyle(
+    fontSize: 18,
+    fontWeight: FontWeightHelper.medium,
+    color: AppColor.lightBlue,
+  );
+  static TextStyle font14LightBlueMedium = const TextStyle(
+    fontSize: 14,
+    fontWeight: FontWeightHelper.medium,
+    color: AppColor.lightBlue,
+  );
+  static TextStyle font50BlackBold = const TextStyle(
+    fontSize: 50,
+    fontWeight: FontWeightHelper.bold,
+    color: Colors.black,
+  );
+
+  static TextStyle font30BlackBold = const TextStyle(
+    fontSize: 30,
+    fontWeight: FontWeightHelper.bold,
     color: Colors.black,
   );
 }
