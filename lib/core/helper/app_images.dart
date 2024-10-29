@@ -11,5 +11,8 @@ class AppImages{
  static const String githubIcon = '${AppConstants.imagePath}github.png';
  static const String linkedinIcon = '${AppConstants.imagePath}linkedin.png';
  static const String whatsappIcon = '${AppConstants.imagePath}whatsapp.png';
+ static const String gdscLogo = '${AppConstants.imagePath}gdsc_logo.png';
+ static const String careerLogo = '${AppConstants.imagePath}career.png';
+ static const String innovateLogo = '${AppConstants.imagePath}innovate.png';
 
 }
