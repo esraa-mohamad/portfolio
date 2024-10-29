@@ -53,7 +53,12 @@ class AppTextStyles {
   static TextStyle font14LightGreyMedium = TextStyle(
     fontSize: 14,
     fontWeight: FontWeightHelper.medium,
-    color: Colors.grey[300],
+    color: Colors.grey[400],
+  );
+  static TextStyle font12LightGreyMedium = TextStyle(
+    fontSize: 12,
+    fontWeight: FontWeightHelper.medium,
+    color: Colors.grey[400],
   );
 
   static TextStyle font30LightBlueBold = const TextStyle(
@@ -64,6 +69,11 @@ class AppTextStyles {
 
   static TextStyle font16GreyMedium = const TextStyle(
     fontSize: 16,
+    fontWeight: FontWeightHelper.medium,
+    color: Colors.grey,
+  );
+  static TextStyle font14GreyMedium = const TextStyle(
+    fontSize: 14,
     fontWeight: FontWeightHelper.medium,
     color: Colors.grey,
   );
@@ -91,6 +101,11 @@ class AppTextStyles {
   static TextStyle font20BlackBold = const TextStyle(
     fontSize: 20,
     fontWeight: FontWeightHelper.bold,
+    color: Colors.black,
+  );
+  static TextStyle font18BlackSemiBold = const TextStyle(
+    fontSize: 18,
+    fontWeight: FontWeightHelper.semiBold,
     color: Colors.black,
   );
 }
