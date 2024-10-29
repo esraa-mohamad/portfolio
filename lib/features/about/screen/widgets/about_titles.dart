@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../core/theme/app_color.dart';
 import '../../../../core/theme/app_text_styles.dart';
@@ -14,13 +13,13 @@ class AboutTitles extends StatelessWidget {
     return Row(
       children: [
         Container(
-          width: 10.w,
-          height: 2.h,
+          width: 80,
+          height: 2,
           color: AppColor.lightBlue,
         ),
         Text(
           '  $title',
-          style: AppTextStyles.font8LightBlueBold.copyWith(
+          style: AppTextStyles.font30LightBlueBold.copyWith(
             fontFamily: FontFamilyHelper.dynaPuffFont,
           ),
         ),

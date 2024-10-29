@@ -46,8 +46,8 @@ class _IconsLinkState extends State<IconsLink> {
         onTap: ontTap,
         child: Image.asset(
           iconPath,
-          width: 30,
-          height: 30,
+          width: 20,
+          height: 20,
         ),
       ),
     );

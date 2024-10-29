@@ -7,8 +7,8 @@ class HomeImage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 500,
-      height: 240,
+      width: MediaQuery.of(context).size.width /3,
+      height: MediaQuery.of(context).size.height /3,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(10),
         boxShadow: const [
@@ -21,8 +21,8 @@ class HomeImage extends StatelessWidget {
       ),
       child: Image.asset(
         AppImages.homeImage ,
-        width: 500,
-        height: 230,
+        width: MediaQuery.of(context).size.width /2,
+        height: MediaQuery.of(context).size.height /3,
       ),
     );
   }

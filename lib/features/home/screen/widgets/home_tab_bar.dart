@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:portfolio/core/theme/app_text_styles.dart';
 import 'package:portfolio/core/theme/font_family_helper.dart';
 
@@ -31,9 +30,9 @@ class _HomeTabBarState extends State<HomeTabBar> {
           });
         },
         textStyle: selectedIndex == index
-            ? AppTextStyles.font6BlueBold
+            ? AppTextStyles.font20BlueBold
             .copyWith(fontFamily: FontFamilyHelper.robotoFont)
-            : AppTextStyles.font4BlackSemiBold
+            : AppTextStyles.font20BlackSemiBold
             .copyWith(fontFamily: FontFamilyHelper.robotoFont),
       )
       ),
@@ -45,13 +44,13 @@ class _HomeTabBarState extends State<HomeTabBar> {
       TextStyle? textStyle,
       required void Function() onTap}) {
     return Padding(
-      padding:  EdgeInsets.only(right: 12.r),
+      padding:  EdgeInsets.only(right: 20),
       child: GestureDetector(
         onTap: onTap,
         child: Text(
           title,
           style: textStyle ??
-              AppTextStyles.font4BlackSemiBold
+              AppTextStyles.font20BlackSemiBold
                   .copyWith(fontFamily: FontFamilyHelper.poppinsFont),
         ),
       ),
