@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/core/helper/app_functions.dart';
 import 'package:portfolio/core/helper/app_images.dart';
 import 'package:portfolio/core/models/project_data_model.dart';
+import 'package:portfolio/core/routes/routes.dart';
 import 'package:portfolio/core/theme/app_color.dart';
 import 'package:portfolio/core/theme/app_text_styles.dart';
 import 'package:portfolio/core/theme/font_family_helper.dart';
@@ -60,99 +60,83 @@ class ProjectsList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final shuffledData = [...projectModel]..shuffle();
     return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: List.generate(
-          projectModel.length,
-          (index) => Padding(
-                padding: EdgeInsets.only(
-                  bottom: MediaQuery.of(context).size.height * 0.02,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: List.generate((shuffledData.length / 2).ceil(), (rowIndex) {
+          return Row(
+            children: List.generate(4, (colIndex) {
+              int itemIndex = rowIndex * 4 + colIndex;
+              if (itemIndex >= shuffledData.length) {
+                return Expanded(
+                    child: Container()); // Empty widget for alignment
+              }
+              return Padding(
+                padding: EdgeInsets.symmetric(
+                  vertical: MediaQuery.of(context).size.height * 0.05,
+                  horizontal: MediaQuery.of(context).size.width * 0.02,
                 ),
-                child:
-                    projectItem(context, projectDataModel: projectModel[index]),
-              )),
-    );
+                child: projectItem(context,
+                    projectDataModel: projectModel[itemIndex],
+                    index: ++itemIndex),
+              );
+            }),
+          );
+        }));
   }
 
   Widget projectItem(BuildContext context,
-      {required ProjectDataModel projectDataModel}) {
-    return Row(
-      children: [
-        ClipRRect(
+      {required ProjectDataModel projectDataModel, required int index}) {
+    return GestureDetector(
+      onTap: (){
+        Navigator.of(context).pushNamed(Routes.projectDetailsScreen , arguments: projectDataModel);
+      },
+      child: Container(
+        width: 250,
+        height: 200,
+        padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 12),
+        decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(15),
-          child: Image.asset(
-            projectDataModel.imagePath,
-            width: MediaQuery.of(context).size.width * 0.09,
-            height: MediaQuery.of(context).size.width * 0.09,
-            fit: BoxFit.cover,
+          boxShadow: const [
+            BoxShadow(
+              color: Colors.grey,
+              offset: Offset(-10, 15),
+              blurRadius:0.5,
+            )
+          ],
+          border: Border.all(
+            color: AppColor.lightBlue,
+            width: 2
           ),
         ),
-        SizedBox(
-          width: MediaQuery.of(context).size.width * 0.02,
-        ),
-        Expanded(
+        child: Center(
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            mainAxisAlignment: MainAxisAlignment.start,
             children: [
-              Text(
-                projectDataModel.title,
-                style: AppTextStyles.font20BlackBold
-                    .copyWith(fontFamily: FontFamilyHelper.robotoFont),
+              const SizedBox(
+                height: 30,
               ),
-              RichText(
-                  text: TextSpan(
-                      text: projectDataModel.description,
-                      style: AppTextStyles.font14GreyMedium,
-                      children: [
-                    TextSpan(
-                      text: projectDataModel.tools,
-                      style: AppTextStyles.font12LightGreyMedium.copyWith(
-                        fontFamily: FontFamilyHelper.poppinsFont,
-                      ),
-                    )
-                  ])),
+              Text(
+                '/$index',
+                style: AppTextStyles.font12WhiteSemiBold
+                    .copyWith(fontFamily: FontFamilyHelper.dynaPuffFont),
+              ),
+              const SizedBox(
+                height: 30,
+              ),
+              Center(
+                child: Text(
+                  projectDataModel.title,
+                  textAlign: TextAlign.center,
+                  style: AppTextStyles.font20BlackBold
+                      .copyWith(fontFamily: FontFamilyHelper.robotoFont),
+                ),
+              ),
             ],
           ),
         ),
-        const Spacer(),
-        Align(
-          alignment: AlignmentDirectional.centerEnd,
-          child: GestureDetector(
-            onTap: () {
-              AppFunctions.launchLinks(projectDataModel.linkUrl);
-            },
-            child: Container(
-              padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(8),
-                boxShadow: const [
-                  BoxShadow(
-                      color: AppColor.lightBlue,
-                      offset: Offset(-15, 10),
-                      blurRadius: 0.2),
-                ],
-                border: Border.all(color: Colors.black, width: 1),
-              ),
-              child: Row(
-                children: [
-                  Text(
-                    'See My Work  ',
-                    style: AppTextStyles.font18BlackSemiBold.copyWith(
-                      fontFamily: FontFamilyHelper.caveatFont,
-                    ),
-                  ),
-                  const Icon(
-                    Icons.arrow_forward,
-                    size: 18,
-                    color: Colors.black,
-                  ),
-                ],
-              ),
-            ),
-          ),
-        ),
-      ],
+      ),
     );
+
   }
 }
