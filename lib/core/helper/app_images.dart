@@ -4,6 +4,11 @@ class AppImages{
 
  static const String womanCodeLogo = '${AppConstants.imagePath}woman_code_logo.png';
  static const String homeImage = '${AppConstants.imagePath}home_image.png';
+ static const String dnaImage = '${AppConstants.imagePath}dna.jpg';
+ static const String calculationImage = '${AppConstants.imagePath}calculation.jpg';
+ static const String newsImage = '${AppConstants.imagePath}news.jpg';
+ static const String beautyImage = '${AppConstants.imagePath}beauty.jpg';
+ static const String fruitsImage = '${AppConstants.imagePath}fruits.jpg';
 
  // icons
  static const String cvIcon = '${AppConstants.imagePath}cv.png';

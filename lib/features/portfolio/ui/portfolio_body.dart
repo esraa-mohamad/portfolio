@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/features/about/screen/ui/about_part_screen.dart';
 import 'package:portfolio/features/home/screen/ui/home_part_screen.dart';
+import 'package:portfolio/features/projects/screen/ui/projects_part_screen.dart';
 
 class PortfolioBody extends StatelessWidget {
   const PortfolioBody({super.key});
@@ -12,6 +13,7 @@ class PortfolioBody extends StatelessWidget {
         children: [
           HomePartScreen(),
           AboutPartScreen(),
+          ProjectsPartScreen(),
         ],
       ),
     );

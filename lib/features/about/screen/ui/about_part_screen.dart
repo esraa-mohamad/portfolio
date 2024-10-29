@@ -12,9 +12,9 @@ class AboutPartScreen extends StatelessWidget {
     return Container(
       width: double.infinity,
       color: Colors.grey[300],
-      padding: const EdgeInsets.symmetric(
-        vertical: 25,
-        horizontal: 25,
+      padding:  EdgeInsets.symmetric(
+        vertical: MediaQuery.of(context).size.height * 0.04,
+        horizontal: MediaQuery.of(context).size.width * 0.03,
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
