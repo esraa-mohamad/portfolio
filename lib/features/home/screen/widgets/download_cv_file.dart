@@ -21,7 +21,7 @@ class DownloadCvFile extends StatelessWidget {
         child: Center(
           child: Text(
             'Download CV file',
-            style: AppTextStyles.font22BlackBold.copyWith(
+            style: AppTextStyles.font22BlackBold(context).copyWith(
               fontFamily: FontFamilyHelper.robotoFont,
             ),
           ),

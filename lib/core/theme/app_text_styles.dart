@@ -1,34 +1,46 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:portfolio/core/theme/app_color.dart';
 import 'package:portfolio/core/theme/font_weight_helper.dart';
 
 class AppTextStyles {
-  static TextStyle font22BlackBold = const TextStyle(
-    fontSize: 22,
-    fontWeight: FontWeightHelper.bold,
-    color: Colors.black,
-  );
-  static TextStyle font10GreyRegular = const TextStyle(
-    fontSize: 10,
-    fontWeight: FontWeightHelper.regular,
-    color: Colors.grey,
-  );
-  static TextStyle font35LightBlackBold = const TextStyle(
-    fontSize: 35,
-    fontWeight: FontWeightHelper.bold,
-    color: Colors.black38,
-  );
+  static TextStyle font22BlackBold(BuildContext context)  {
+    return TextStyle(
+      fontSize: getResponsiveFontSize(context , baseFontSize: 22),
+      fontWeight: FontWeightHelper.bold,
+      color: Colors.black,
+    );
+  }
+  static TextStyle font10GreyRegular(BuildContext context){
+    return  TextStyle(
+      fontSize: getResponsiveFontSize(context , baseFontSize: 10),
+      fontWeight: FontWeightHelper.regular,
+      color: Colors.grey,
+    );
+  }
+  static TextStyle font35LightBlackBold(BuildContext context){
+    return TextStyle(
+      fontSize: getResponsiveFontSize(context , baseFontSize: 35),
+      fontWeight: FontWeightHelper.bold,
+      color: Colors.black38,
+    );
+  }
 
-  static TextStyle font20BlackSemiBold = const TextStyle(
-    fontSize: 20,
-    fontWeight: FontWeightHelper.semiBold,
-    color: Colors.black,
-  );
-  static TextStyle font20BlueBold = const TextStyle(
-    fontSize: 20,
-    fontWeight: FontWeightHelper.bold,
-    color: AppColor.mainBlue,
-  );
+
+  static TextStyle font20BlackSemiBold(BuildContext context){
+    return TextStyle(
+      fontSize: getResponsiveFontSize(context , baseFontSize: 20),
+      fontWeight: FontWeightHelper.semiBold,
+      color: Colors.black,
+    );
+  }
+  static TextStyle font20BlueBold(context){
+    return  TextStyle(
+      fontSize: getResponsiveFontSize(context , baseFontSize: 20),
+      fontWeight: FontWeightHelper.bold,
+      color: AppColor.mainBlue,
+    );
+  }
   static TextStyle font30BlueBold = const TextStyle(
     fontSize: 30,
     fontWeight: FontWeightHelper.bold,
@@ -152,3 +164,27 @@ class AppTextStyles {
     color: Colors.white,
   );
 }
+
+double getResponsiveFontSize(BuildContext context ,{required double baseFontSize}) {
+  double scaleFactor = getScaleFactor(context);
+  double responsiveFontSize = baseFontSize * scaleFactor;
+  double lowerFontSize = baseFontSize * 0.8;
+  double upperFontSize = baseFontSize * 1.2;
+  return responsiveFontSize.clamp(lowerFontSize, upperFontSize);
+}
+
+double getScaleFactor(BuildContext context) {
+  // var dispatcher = PlatformDispatcher.instance;
+  // var physicalWidth = dispatcher.views.first.physicalSize.width;
+  // var  devicePixelRatio = dispatcher.views.first.devicePixelRatio;
+  //double width = physicalWidth / devicePixelRatio;
+  double  width = MediaQuery.sizeOf(context).width;
+  if (width < 800) {
+    return width / 550;
+  } else if (width < 1200) {
+    return width / 1000;
+  } else {
+    return width / 1500;
+  }
+}
+
