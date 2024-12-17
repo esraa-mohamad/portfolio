@@ -89,7 +89,7 @@ class ProjectOverview extends StatelessWidget {
                         borderRadius: BorderRadius.circular(8),
                         boxShadow: const [
                           BoxShadow(
-                              color: AppColor.lightBlue,
+                              color: AppColor.bleuDeFrance,
                               offset: Offset(-15, 10),
                               blurRadius: 0.2),
                         ],

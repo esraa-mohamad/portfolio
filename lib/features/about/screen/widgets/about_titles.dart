@@ -15,7 +15,7 @@ class AboutTitles extends StatelessWidget {
         Container(
           width: 80,
           height: 2,
-          color: AppColor.lightBlue,
+          color: AppColor.bleuDeFrance,
         ),
         Text(
           '  $title',

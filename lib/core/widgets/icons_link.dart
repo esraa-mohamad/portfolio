@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/core/helper/app_functions.dart';
-import 'package:portfolio/core/helper/app_images.dart';
-import 'package:portfolio/core/models/icon_link_model.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import '../helper/app_functions.dart';
+import '../helper/app_images.dart';
+import '../models/icon_link_model.dart';
 
 class IconsLink extends StatefulWidget {
   const IconsLink({super.key});
@@ -37,6 +38,7 @@ class _IconsLinkState extends State<IconsLink> {
     required String iconPath,
     required void Function() ontTap,
   }) {
+    double width = MediaQuery.sizeOf(context).width;
     return Padding(
       padding: const EdgeInsets.only(
         right: 15,
@@ -45,8 +47,9 @@ class _IconsLinkState extends State<IconsLink> {
         onTap: ontTap,
         child: Image.asset(
           iconPath,
-          width: 20,
-          height: 20,
+          width: width < 800 ? 20.w :30.w,
+          height:width < 800 ? 20.h : 30.h,
+          fit: BoxFit.scaleDown,
         ),
       ),
     );

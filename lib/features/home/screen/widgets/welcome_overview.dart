@@ -13,15 +13,15 @@ class WelcomeOverview extends StatelessWidget {
         RichText(
             text: TextSpan(
               text: 'Hi , I\'m ',
-              style: AppTextStyles.font40BlackSemiBold.copyWith(fontFamily: FontFamilyHelper.robotoFont),
+              style: AppTextStyles.font40BlackSemiBold(context).copyWith(fontFamily: FontFamilyHelper.robotoFont),
               children: [
                 TextSpan(
                   text: 'Esraa!' ,
-                  style: AppTextStyles.font40BlueBold.copyWith(fontFamily: FontFamilyHelper.robotoFont) ,
+                  style: AppTextStyles.font40BrandeisBlueBold(context).copyWith(fontFamily: FontFamilyHelper.robotoFont) ,
                 ),
                 TextSpan(
                   text: '\nFlutter Developer' ,
-                  style: AppTextStyles.font40BlackSemiBold.copyWith(fontFamily: FontFamilyHelper.robotoFont) ,
+                  style: AppTextStyles.font40BlackSemiBold(context).copyWith(fontFamily: FontFamilyHelper.robotoFont) ,
                 ),
               ]
             ),
@@ -30,12 +30,13 @@ class WelcomeOverview extends StatelessWidget {
           height: 10,
         ),
         Text(
-          'Building responsive mobile application \nfrom 2 years experience in dart and flutter.' ,
-          style: AppTextStyles.font18GreyMedium.copyWith(fontFamily: FontFamilyHelper.poppinsFont),
+          'Building responsive mobile application from 2 years experience in dart and flutter.' ,
+          maxLines: 5,
+          style: AppTextStyles.font22DarkCharcoalMedium(context).copyWith(fontFamily: FontFamilyHelper.poppinsFont),
         ),
         Text(
           'I\'m here for any new challenge \nI\'m here to write new code' ,
-          style: AppTextStyles.font14LightGreyMedium.copyWith(fontFamily: FontFamilyHelper.dynaPuffFont),
+          style: AppTextStyles.font18SilverSandMedium(context).copyWith(fontFamily: FontFamilyHelper.dynaPuffFont),
         ),
       ],
     );

@@ -41,7 +41,7 @@ class _PortfolioTabBarState extends State<PortfolioTabBar> {
                         }
                       });
                     },
-                  textStyle: hoverIndices.contains(index)  ? AppTextStyles.font20BlueBold(context)
+                  textStyle: hoverIndices.contains(index)  ? AppTextStyles.font20BrandeisBlueBold(context)
                       .copyWith(fontFamily: FontFamilyHelper.poppinsFont) :
                   AppTextStyles.font20BlackSemiBold(context)
                       .copyWith(fontFamily: FontFamilyHelper.poppinsFont),

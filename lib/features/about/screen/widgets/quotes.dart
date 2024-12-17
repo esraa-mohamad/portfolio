@@ -14,7 +14,7 @@ class Quotes extends StatelessWidget {
         children: [
           Text(
             "\"I’m not a great programmer; I’m just a good programmer with great habits.\"",
-            style: AppTextStyles.font30BlueBold.copyWith(
+            style: AppTextStyles.font30BrandeisBlueBold(context).copyWith(
               fontFamily: FontFamilyHelper.caveatFont,
             ),
           ),

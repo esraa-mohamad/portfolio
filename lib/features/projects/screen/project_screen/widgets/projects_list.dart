@@ -109,7 +109,7 @@ class ProjectsList extends StatelessWidget {
             )
           ],
           border: Border.all(
-            color: AppColor.lightBlue,
+            color: AppColor.bleuDeFrance,
             width: 2
           ),
         ),

@@ -12,7 +12,7 @@ void showSnackBar({required BuildContext context , required String message , Col
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(20) ,
         ),
-        backgroundColor:AppColor.mainBlue,
+        backgroundColor:AppColor.brandeisBlue,
         content: Text(message ,style: AppTextStyles.font22BlackBold(context),)
     ),
   );

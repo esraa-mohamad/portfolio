@@ -27,7 +27,7 @@ class Education extends StatelessWidget {
                     borderRadius: BorderRadius.circular(15),
                     boxShadow: const [
                       BoxShadow(
-                        color: AppColor.lightBlue,
+                        color: AppColor.bleuDeFrance,
                         blurRadius: 5,
                       )
                     ]),
@@ -102,7 +102,7 @@ class Education extends StatelessWidget {
                     borderRadius: BorderRadius.circular(15),
                     boxShadow: const [
                       BoxShadow(
-                        color: AppColor.lightBlue,
+                        color: AppColor.bleuDeFrance,
                         blurRadius: 5,
                       )
                     ]),
@@ -135,7 +135,7 @@ class Education extends StatelessWidget {
                     ),
                     Text(
                       'sing for searching and adding DNA files by identifying crimes, paternity tests, compare between files DNA ,searching missing persons and add new data in database',
-                      style: AppTextStyles.font14LightGreyMedium
+                      style: AppTextStyles.font18SilverSandMedium(context)
                           .copyWith(fontFamily: FontFamilyHelper.poppinsFont),
                     ),
                      SizedBox(

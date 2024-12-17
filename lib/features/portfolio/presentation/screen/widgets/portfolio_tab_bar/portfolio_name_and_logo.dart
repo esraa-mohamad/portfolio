@@ -22,14 +22,14 @@ class PortfolioNameAndLogo extends StatelessWidget {
             ),
             Text(
               'Flutter Developer',
-              style: AppTextStyles.font10GreyRegular(context)
+              style: AppTextStyles.font14PhilippineGrayRegular(context)
                   .copyWith(fontFamily: FontFamilyHelper.poppinsFont),
             ),
           ],
         ),
         Text(
           '  |',
-          style: AppTextStyles.font35LightBlackBold(context),
+          style: AppTextStyles.font35Black38Bold(context),
         ),
         FittedBox(
           fit: BoxFit.scaleDown,
