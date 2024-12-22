@@ -97,7 +97,7 @@ class Experience extends StatelessWidget {
             borderRadius: BorderRadius.circular(15),
             boxShadow: const [
               BoxShadow(
-                color: AppColor.lightBlue,
+                color: AppColor.bleuDeFrance,
                 blurRadius: 10,
               ),
             ]),
@@ -111,7 +111,7 @@ class Experience extends StatelessWidget {
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(12),
                       border: Border.all(
-                        color: AppColor.mainBlue,
+                        color: AppColor.brandeisBlue,
                         width: 2,
                       )),
                   padding:

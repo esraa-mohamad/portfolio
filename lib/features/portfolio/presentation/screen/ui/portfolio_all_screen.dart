@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/features/portfolio/ui/portfolio_body.dart';
+
+import '../widgets/portfolio_body.dart';
 
 class PortfolioAllScreen extends StatelessWidget {
   const PortfolioAllScreen({super.key});
@@ -7,6 +8,7 @@ class PortfolioAllScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
+      backgroundColor: Colors.white,
       body: PortfolioBody(),
     );
   }

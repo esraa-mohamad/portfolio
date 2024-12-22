@@ -65,23 +65,26 @@ class ProjectsList extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.center,
         children: List.generate((shuffledData.length / 2).ceil(), (rowIndex) {
-          return Row(
-            children: List.generate(4, (colIndex) {
-              int itemIndex = rowIndex * 4 + colIndex;
-              if (itemIndex >= shuffledData.length) {
-                return Expanded(
-                    child: Container()); // Empty widget for alignment
-              }
-              return Padding(
-                padding: EdgeInsets.symmetric(
-                  vertical: MediaQuery.of(context).size.height * 0.05,
-                  horizontal: MediaQuery.of(context).size.width * 0.02,
-                ),
-                child: projectItem(context,
-                    projectDataModel: projectModel[itemIndex],
-                    index: ++itemIndex),
-              );
-            }),
+          return Padding(
+            padding:  EdgeInsets.only(bottom: MediaQuery.of(context).size.height * 0.05),
+            child: Wrap(
+              alignment: WrapAlignment.center,
+              spacing: MediaQuery.of(context).size.width * 0.02,
+              runSpacing: MediaQuery.of(context).size.height * 0.05,
+              children: List.generate(4, (colIndex) {
+                int itemIndex = rowIndex * 4 + colIndex;
+                if (itemIndex >= shuffledData.length) {
+                  return Expanded(
+                      child: Container()); // Empty widget for alignment
+                }
+                return SizedBox(
+                  width: 250,
+                  child: projectItem(context,
+                      projectDataModel: projectModel[itemIndex],
+                      index: ++itemIndex),
+                );
+              }),
+            ),
           );
         }));
   }
@@ -106,7 +109,7 @@ class ProjectsList extends StatelessWidget {
             )
           ],
           border: Border.all(
-            color: AppColor.lightBlue,
+            color: AppColor.bleuDeFrance,
             width: 2
           ),
         ),

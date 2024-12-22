@@ -35,14 +35,14 @@ class ProjectTitle extends StatelessWidget {
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(50),
                   border: Border.all(
-                    color: AppColor.mainBlue,
+                    color: AppColor.brandeisBlue,
                     width: 2,
                   ),
                 ),
                 child: const Icon(
                   Icons.close,
                   size: 30,
-                  color: AppColor.mainBlue,
+                  color: AppColor.brandeisBlue,
                 ),
               ),
             ),

@@ -19,7 +19,7 @@ class ContactPartScreen extends StatelessWidget {
         horizontal: MediaQuery.of(context).size.width *0.02,
         vertical: MediaQuery.of(context).size.height *0.02,
       ),
-      color: AppColor.mainBlue,
+      color: AppColor.brandeisBlue,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
