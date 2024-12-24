@@ -129,7 +129,7 @@ class Experience extends StatelessWidget {
                   child: Text(
                     title,
                     maxLines: 2,
-                    style: AppTextStyles.font20BlackBold.copyWith(
+                    style: AppTextStyles.font20BlackBold(context).copyWith(
                       fontFamily: FontFamilyHelper.robotoFont,
                     ),
                   ),
@@ -143,7 +143,7 @@ class Experience extends StatelessWidget {
               description,
               maxLines: 5,
               overflow: TextOverflow.ellipsis,
-              style: AppTextStyles.font16GreyMedium,
+              style:  AppTextStyles.font16PhilippineGrayMedium(context).copyWith(fontFamily: FontFamilyHelper.poppinsFont,),
             ),
             SizedBox(
               height: MediaQuery.of(context).size.width *0.02,
@@ -153,9 +153,7 @@ class Experience extends StatelessWidget {
                 alignment: AlignmentDirectional.bottomEnd,
                 child: Text(
                   time,
-                  style: AppTextStyles.font16BlueMedium.copyWith(
-                    fontFamily: FontFamilyHelper.poppinsFont,
-                  ),
+                  style: AppTextStyles.font16BrandeisBlueMedium(context).copyWith(fontFamily: FontFamilyHelper.poppinsFont,),
                 ),
               ),
             ),

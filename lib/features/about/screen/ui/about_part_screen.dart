@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/features/about/screen/widgets/education.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:portfolio/core/helper/spacing.dart';
+import 'package:portfolio/core/theme/app_color.dart';
+import 'package:portfolio/features/about/screen/widgets/education/education.dart';
 import 'package:portfolio/features/about/screen/widgets/experience.dart';
 import 'package:portfolio/features/about/screen/widgets/quotes.dart';
 import 'package:portfolio/features/about/screen/widgets/skills.dart';
@@ -13,18 +16,16 @@ class AboutPartScreen extends StatelessWidget {
     return Container(
       key: globalKey,
       width: double.infinity,
-      color: Colors.grey[300],
+      color: AppColor.lightGray,
       padding:  EdgeInsets.symmetric(
-        vertical: MediaQuery.of(context).size.height * 0.04,
-        horizontal: MediaQuery.of(context).size.width * 0.03,
+        vertical: 50.h,
+        horizontal: 20.w,
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           const Quotes(),
-           SizedBox(
-            height: MediaQuery.of(context).size.height * 0.07,
-          ),
+           verticalSpace(50),
           const Education(),
            SizedBox(
             height: MediaQuery.of(context).size.height * 0.07,

@@ -131,7 +131,7 @@ class ProjectsList extends StatelessWidget {
                 child: Text(
                   projectDataModel.title,
                   textAlign: TextAlign.center,
-                  style: AppTextStyles.font20BlackBold
+                  style: AppTextStyles.font20BlackBold(context)
                       .copyWith(fontFamily: FontFamilyHelper.robotoFont),
                 ),
               ),
