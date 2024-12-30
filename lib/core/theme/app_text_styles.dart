@@ -140,11 +140,13 @@ class AppTextStyles {
       color: AppColor.brandeisBlue,
     );
   }
-  static TextStyle font16WhiteSemiBold = const TextStyle(
-    fontSize: 16,
-    fontWeight: FontWeightHelper.semiBold,
-    color: Colors.white,
-  );
+  static TextStyle font16WhiteSemiBold(context){
+    return  TextStyle(
+      fontSize: getResponsiveFontSize(context, baseFontSize: 16),
+      fontWeight: FontWeightHelper.semiBold,
+      color: AppColor.white,
+    );
+  }
   static TextStyle font25BlackBold(context) {
     return  TextStyle(
       fontSize: getResponsiveFontSize(context, baseFontSize: 25),
@@ -157,6 +159,14 @@ class AppTextStyles {
       fontSize: getResponsiveFontSize(context, baseFontSize: 20),
       fontWeight: FontWeightHelper.bold,
       color: AppColor.black,
+    );
+  }
+
+  static TextStyle font18BleuDeFranceSemiBold(context) {
+    return  TextStyle(
+      fontSize: getResponsiveFontSize(context, baseFontSize: 18),
+      fontWeight: FontWeightHelper.semiBold,
+      color: AppColor.bleuDeFrance,
     );
   }
   static TextStyle font18BlackSemiBold = const TextStyle(

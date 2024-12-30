@@ -12,7 +12,7 @@ class Education extends StatelessWidget {
     return Column(
       children: [
         const AboutTitles(title: 'Education'),
-        verticalSpace(20),
+        verticalSpace(30),
         AdaptiveLayout(
             mobileLayout: (context) => EducationInfo(),
             tabletLayout: (context)=> FittedBox(child: EducationInfo()),

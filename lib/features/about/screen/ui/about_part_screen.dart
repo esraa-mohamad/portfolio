@@ -5,7 +5,7 @@ import 'package:portfolio/core/theme/app_color.dart';
 import 'package:portfolio/features/about/screen/widgets/education/education.dart';
 import 'package:portfolio/features/about/screen/widgets/experience.dart';
 import 'package:portfolio/features/about/screen/widgets/quotes.dart';
-import 'package:portfolio/features/about/screen/widgets/skills.dart';
+import 'package:portfolio/features/about/screen/widgets/skills/skills.dart';
 
 class AboutPartScreen extends StatelessWidget {
   const AboutPartScreen({super.key, required this.globalKey});
@@ -25,16 +25,12 @@ class AboutPartScreen extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           const Quotes(),
-           verticalSpace(50),
+           verticalSpace(70),
           const Education(),
-           SizedBox(
-            height: MediaQuery.of(context).size.height * 0.07,
-          ),
+           verticalSpace(70),
           Skills(),
-           SizedBox(
-             height: MediaQuery.of(context).size.height * 0.07,
-          ),
-          Experience()
+          verticalSpace(70),
+          // Experience(),
         ],
       ),
     );
