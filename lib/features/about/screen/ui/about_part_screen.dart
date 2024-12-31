@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:portfolio/core/helper/spacing.dart';
-import 'package:portfolio/core/theme/app_color.dart';
-import 'package:portfolio/features/about/screen/widgets/education/education.dart';
-import 'package:portfolio/features/about/screen/widgets/experience.dart';
-import 'package:portfolio/features/about/screen/widgets/quotes.dart';
-import 'package:portfolio/features/about/screen/widgets/skills/skills.dart';
+import '../../../../core/helper/spacing.dart';
+import '../../../../core/theme/app_color.dart';
+import '../widgets/education/education.dart';
+import '../widgets/experience/experience.dart';
+import '../widgets/quotes.dart';
+import '../widgets/skills/skills.dart';
 
 class AboutPartScreen extends StatelessWidget {
   const AboutPartScreen({super.key, required this.globalKey});
@@ -30,7 +30,8 @@ class AboutPartScreen extends StatelessWidget {
            verticalSpace(70),
           Skills(),
           verticalSpace(70),
-          // Experience(),
+          Experience(),
+          verticalSpace(50),
         ],
       ),
     );

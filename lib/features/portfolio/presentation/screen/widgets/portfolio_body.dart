@@ -33,9 +33,9 @@ class _PortfolioBodyState extends State<PortfolioBody> {
           AboutPartScreen(
             globalKey: HandlePortfolio.aboutKey,
           ),
-          // ProjectsPartScreen(
-          //   globalKey: HandlePortfolio.projectsKey,
-          // ),
+          ProjectsPartScreen(
+            globalKey: HandlePortfolio.projectsKey,
+          ),
           // ContactPartScreen(
           //   globalKey: HandlePortfolio.contactKey,
           // ),
