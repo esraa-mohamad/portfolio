@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/features/about/screen/widgets/education.dart';
-import 'package:portfolio/features/about/screen/widgets/experience.dart';
-import 'package:portfolio/features/about/screen/widgets/quotes.dart';
-import 'package:portfolio/features/about/screen/widgets/skills.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import '../../../../core/helper/spacing.dart';
+import '../../../../core/theme/app_color.dart';
+import '../widgets/education/education.dart';
+import '../widgets/experience/experience.dart';
+import '../widgets/quotes.dart';
+import '../widgets/skills/skills.dart';
 
 class AboutPartScreen extends StatelessWidget {
   const AboutPartScreen({super.key, required this.globalKey});
@@ -13,27 +16,22 @@ class AboutPartScreen extends StatelessWidget {
     return Container(
       key: globalKey,
       width: double.infinity,
-      color: Colors.grey[300],
+      color: AppColor.lightGray,
       padding:  EdgeInsets.symmetric(
-        vertical: MediaQuery.of(context).size.height * 0.04,
-        horizontal: MediaQuery.of(context).size.width * 0.03,
+        vertical: 50.h,
+        horizontal: 20.w,
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           const Quotes(),
-           SizedBox(
-            height: MediaQuery.of(context).size.height * 0.07,
-          ),
+           verticalSpace(70),
           const Education(),
-           SizedBox(
-            height: MediaQuery.of(context).size.height * 0.07,
-          ),
+           verticalSpace(70),
           Skills(),
-           SizedBox(
-             height: MediaQuery.of(context).size.height * 0.07,
-          ),
-          Experience()
+          verticalSpace(70),
+          Experience(),
+          verticalSpace(50),
         ],
       ),
     );

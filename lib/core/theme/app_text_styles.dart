@@ -113,42 +113,62 @@ class AppTextStyles {
     color: Colors.grey[400],
   );
 
-  static TextStyle font30LightBlueBold = const TextStyle(
-    fontSize: 30,
-    fontWeight: FontWeightHelper.bold,
-    color: AppColor.bleuDeFrance,
-  );
+  static TextStyle font30BleuDeFranceBold(context){
+    return  TextStyle(
+      fontSize: getResponsiveFontSize(context, baseFontSize: 30),
+      fontWeight: FontWeightHelper.bold,
+      color: AppColor.bleuDeFrance,
+    );
+  }
 
-  static TextStyle font16GreyMedium = const TextStyle(
-    fontSize: 16,
-    fontWeight: FontWeightHelper.medium,
-    color: Colors.grey,
-  );
+  static TextStyle font16PhilippineGrayMedium(context){
+    return  TextStyle(
+      fontSize: getResponsiveFontSize(context, baseFontSize: 16),
+      fontWeight: FontWeightHelper.medium,
+      color: AppColor.philippineGray,
+    );
+  }
   static TextStyle font14GreyMedium = const TextStyle(
     fontSize: 14,
     fontWeight: FontWeightHelper.medium,
     color: Colors.grey,
   );
-  static TextStyle font16BlueMedium = const TextStyle(
-    fontSize: 16,
-    fontWeight: FontWeightHelper.medium,
-    color: AppColor.brandeisBlue,
-  );
-  static TextStyle font16WhiteSemiBold = const TextStyle(
-    fontSize: 16,
-    fontWeight: FontWeightHelper.semiBold,
-    color: Colors.white,
-  );
-  static TextStyle font25BlackBold = const TextStyle(
-    fontSize: 25,
-    fontWeight: FontWeightHelper.bold,
-    color: Colors.black,
-  );
-  static TextStyle font20BlackBold = const TextStyle(
-    fontSize: 20,
-    fontWeight: FontWeightHelper.bold,
-    color: Colors.black,
-  );
+  static TextStyle font16BrandeisBlueMedium(context){
+    return  TextStyle(
+      fontSize: getResponsiveFontSize(context, baseFontSize: 16),
+      fontWeight: FontWeightHelper.medium,
+      color: AppColor.brandeisBlue,
+    );
+  }
+  static TextStyle font16WhiteSemiBold(context){
+    return  TextStyle(
+      fontSize: getResponsiveFontSize(context, baseFontSize: 16),
+      fontWeight: FontWeightHelper.semiBold,
+      color: AppColor.white,
+    );
+  }
+  static TextStyle font25BlackBold(context) {
+    return  TextStyle(
+      fontSize: getResponsiveFontSize(context, baseFontSize: 25),
+      fontWeight: FontWeightHelper.bold,
+      color: AppColor.black,
+    );
+  }
+  static TextStyle font20BlackBold(context) {
+    return  TextStyle(
+      fontSize: getResponsiveFontSize(context, baseFontSize: 20),
+      fontWeight: FontWeightHelper.bold,
+      color: AppColor.black,
+    );
+  }
+
+  static TextStyle font18BleuDeFranceSemiBold(context) {
+    return  TextStyle(
+      fontSize: getResponsiveFontSize(context, baseFontSize: 18),
+      fontWeight: FontWeightHelper.semiBold,
+      color: AppColor.bleuDeFrance,
+    );
+  }
   static TextStyle font18BlackSemiBold = const TextStyle(
     fontSize: 18,
     fontWeight: FontWeightHelper.semiBold,

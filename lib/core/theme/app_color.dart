@@ -18,4 +18,5 @@ class AppColor{
   static const Color eucalyptus = Color(0xff4EC9B0);
   static const Color philippineGray = Color(0xff8D8D8D);
   static const Color manatee = Color(0xff9CA2AD);
+  static const Color white = Color(0xffFFFFFF);
 }
