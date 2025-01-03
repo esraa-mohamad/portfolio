@@ -31,7 +31,7 @@ class ContactInfo extends StatelessWidget {
             ),
             Text(
                 ' Egypt , Cairo',
-              style: AppTextStyles.font18BlackSemiBold.copyWith(
+              style: AppTextStyles.font18BlackSemiBold(context).copyWith(
                 fontFamily: FontFamilyHelper.poppinsFont,
               ),
             ),
@@ -50,7 +50,7 @@ class ContactInfo extends StatelessWidget {
               },
               child: Text(
                   ' esoodawood186@gmail.com',
-                style: AppTextStyles.font18BlackSemiBold.copyWith(
+                style: AppTextStyles.font18BlackSemiBold(context).copyWith(
                   fontFamily: FontFamilyHelper.poppinsFont,
                 ),
               ),
