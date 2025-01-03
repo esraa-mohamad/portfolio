@@ -72,7 +72,7 @@ class ProjectsList extends StatelessWidget {
       itemBuilder: (context, index) {
         return ProjectItem(
           projectDataModel: projectModelList[index],
-          index: index++,
+          index: ++index,
         );
       },
     );
