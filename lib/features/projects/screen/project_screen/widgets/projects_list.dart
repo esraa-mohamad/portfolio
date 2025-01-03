@@ -1,15 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:portfolio/core/helper/app_images.dart';
 import 'package:portfolio/core/models/project_data_model.dart';
-import 'package:portfolio/core/routes/routes.dart';
-import 'package:portfolio/core/theme/app_color.dart';
-import 'package:portfolio/core/theme/app_text_styles.dart';
-import 'package:portfolio/core/theme/font_family_helper.dart';
+import 'package:portfolio/features/projects/screen/project_screen/widgets/project_item.dart';
 
 class ProjectsList extends StatelessWidget {
-  ProjectsList({super.key});
+  ProjectsList({super.key, required this.crossAxisCount});
 
-  final List<ProjectDataModel> projectModel = [
+  final List<ProjectDataModel> projectModelList = [
     ProjectDataModel(
       imagePath: AppImages.dnaImage,
       title: 'Double Helix Detective System "Dna Testing System"',
@@ -58,88 +56,25 @@ class ProjectsList extends StatelessWidget {
     ),
   ];
 
+  final int crossAxisCount ;
   @override
   Widget build(BuildContext context) {
-    final shuffledData = [...projectModel]..shuffle();
-    return Column(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: List.generate((shuffledData.length / 2).ceil(), (rowIndex) {
-          return Padding(
-            padding:  EdgeInsets.only(bottom: MediaQuery.of(context).size.height * 0.05),
-            child: Wrap(
-              alignment: WrapAlignment.center,
-              spacing: MediaQuery.of(context).size.width * 0.02,
-              runSpacing: MediaQuery.of(context).size.height * 0.05,
-              children: List.generate(4, (colIndex) {
-                int itemIndex = rowIndex * 4 + colIndex;
-                if (itemIndex >= shuffledData.length) {
-                  return Expanded(
-                      child: Container()); // Empty widget for alignment
-                }
-                return SizedBox(
-                  width: 250,
-                  child: projectItem(context,
-                      projectDataModel: projectModel[itemIndex],
-                      index: ++itemIndex),
-                );
-              }),
-            ),
-          );
-        }));
-  }
-
-  Widget projectItem(BuildContext context,
-      {required ProjectDataModel projectDataModel, required int index}) {
-    return GestureDetector(
-      onTap: (){
-        Navigator.of(context).pushNamed(Routes.projectDetailsScreen , arguments: projectDataModel);
-      },
-      child: Container(
-        width: 250,
-        height: 200,
-        padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 12),
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(15),
-          boxShadow: const [
-            BoxShadow(
-              color: Colors.grey,
-              offset: Offset(-10, 15),
-              blurRadius:0.5,
-            )
-          ],
-          border: Border.all(
-            color: AppColor.bleuDeFrance,
-            width: 2
-          ),
-        ),
-        child: Center(
-          child: Column(
-            children: [
-              const SizedBox(
-                height: 30,
-              ),
-              Text(
-                '/$index',
-                style: AppTextStyles.font12WhiteSemiBold
-                    .copyWith(fontFamily: FontFamilyHelper.dynaPuffFont),
-              ),
-              const SizedBox(
-                height: 30,
-              ),
-              Center(
-                child: Text(
-                  projectDataModel.title,
-                  textAlign: TextAlign.center,
-                  style: AppTextStyles.font20BlackBold(context)
-                      .copyWith(fontFamily: FontFamilyHelper.robotoFont),
-                ),
-              ),
-            ],
-          ),
-        ),
+    return GridView.builder(
+      shrinkWrap: true,
+      physics: NeverScrollableScrollPhysics(),
+      itemCount: projectModelList.length,
+      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+        crossAxisCount: crossAxisCount,
+        mainAxisSpacing: 40.h ,
+        crossAxisSpacing: 35.w ,
+        mainAxisExtent: 200.h,
       ),
+      itemBuilder: (context, index) {
+        return ProjectItem(
+          projectDataModel: projectModelList[index],
+          index: index++,
+        );
+      },
     );
-
   }
 }

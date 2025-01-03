@@ -21,7 +21,7 @@ class AppTextStyles {
     return TextStyle(
       fontSize: getResponsiveFontSize(context , baseFontSize: 35),
       fontWeight: FontWeightHelper.bold,
-      color: AppColor.black.withOpacity(0.38),
+      color: AppColor.black.withAlpha(38),
     );
   }
 
@@ -175,11 +175,13 @@ class AppTextStyles {
     color: Colors.black,
   );
 
-  static TextStyle font12WhiteSemiBold = const TextStyle(
-    fontSize: 12,
-    fontWeight: FontWeightHelper.semiBold,
-    color: Colors.white,
-  );
+  static TextStyle font12WhiteSemiBold(context){
+    return TextStyle(
+      fontSize: getResponsiveFontSize(context, baseFontSize: 12),
+      fontWeight: FontWeightHelper.semiBold,
+      color: Colors.white,
+    );
+  }
   static TextStyle font20WhiteBold = const TextStyle(
     fontSize: 20,
     fontWeight: FontWeightHelper.bold,
@@ -239,9 +241,9 @@ double getScaleFactor(BuildContext context) {
   // var  devicePixelRatio = dispatcher.views.first.devicePixelRatio;
   //double width = physicalWidth / devicePixelRatio;
   double  width = MediaQuery.sizeOf(context).width;
-  if (width < 800) {
+  if (width < 700) {
     return width / 550;
-  } else if (width < 1200) {
+  } else if (width < 1300) {
     return width / 1000;
   } else {
     return width / 1200;
