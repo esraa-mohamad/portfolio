@@ -5,8 +5,9 @@ import '../helper/app_images.dart';
 import '../models/icon_link_model.dart';
 
 class IconsLink extends StatefulWidget {
-  const IconsLink({super.key});
+  const IconsLink({super.key, this.mainAxisAlignment});
 
+  final MainAxisAlignment? mainAxisAlignment;
   @override
   State<IconsLink> createState() => _IconsLinkState();
 }
@@ -22,6 +23,7 @@ class _IconsLinkState extends State<IconsLink> {
   @override
   Widget build(BuildContext context) {
     return Row(
+      mainAxisAlignment:widget.mainAxisAlignment ?? MainAxisAlignment.start ,
       children: List.generate(
         profiles.length,
         (index) => iconLink(

@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/core/helper/app_functions.dart';
+import 'package:portfolio/core/helper/spacing.dart';
 import 'package:portfolio/core/theme/app_text_styles.dart';
 import 'package:portfolio/core/theme/font_family_helper.dart';
+import 'package:portfolio/features/contact/screen/widgets/contact_email.dart';
+import 'package:portfolio/features/contact/screen/widgets/contact_location.dart';
 
+import '../../../../core/theme/app_color.dart';
 import '../../../../core/widgets/icons_link.dart';
 
 class ContactInfo extends StatelessWidget {
@@ -11,56 +14,22 @@ class ContactInfo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
+      mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Text(
-          'Contact Info' ,
-          style: AppTextStyles.font40WhiteBold.copyWith(
-            fontFamily: FontFamilyHelper.caveatFont
+          'Contact Info',
+          style: AppTextStyles.font40WhiteBold(context).copyWith(
+            fontFamily: FontFamilyHelper.caveatFont,
+            color: AppColor.brandeisBlue,
           ),
         ),
-        SizedBox(
-          height: MediaQuery.of(context).size.height *0.01,
+        verticalSpace(20),
+        ContactLocation(),
+        ContactEmail(),
+        verticalSpace(20),
+        const IconsLink(
+          mainAxisAlignment: MainAxisAlignment.center,
         ),
-        Row(
-          children: [
-            const Icon(
-              Icons.location_on ,
-              size: 20,
-              color: Colors.black,
-            ),
-            Text(
-                ' Egypt , Cairo',
-              style: AppTextStyles.font18BlackSemiBold(context).copyWith(
-                fontFamily: FontFamilyHelper.poppinsFont,
-              ),
-            ),
-          ],
-        ),
-        Row(
-          children: [
-            const Icon(
-              Icons.alternate_email ,
-              size: 20,
-              color: Colors.black,
-            ),
-            GestureDetector(
-              onTap: (){
-                AppFunctions.launchEmail(email: "esoodawood186@gmail.com");
-              },
-              child: Text(
-                  ' esoodawood186@gmail.com',
-                style: AppTextStyles.font18BlackSemiBold(context).copyWith(
-                  fontFamily: FontFamilyHelper.poppinsFont,
-                ),
-              ),
-            ),
-          ],
-        ),
-        SizedBox(
-          height: MediaQuery.of(context).size.height *0.02,
-        ),
-        const IconsLink()
       ],
     );
   }

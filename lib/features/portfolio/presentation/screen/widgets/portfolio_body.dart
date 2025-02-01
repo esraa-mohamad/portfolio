@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/core/widgets/adaptive_layout.dart';
+import 'package:portfolio/features/copy_right/presentation/screen/view/copy_right_screen.dart';
 import 'package:portfolio/features/portfolio/presentation/screen/widgets/portfolio_header.dart';
 import 'package:portfolio/features/portfolio/presentation/screen/widgets/portfolio_header_mobile.dart';
 import '../../../../about/screen/ui/about_part_screen.dart';
@@ -36,9 +37,10 @@ class _PortfolioBodyState extends State<PortfolioBody> {
           ProjectsPartScreen(
             globalKey: HandlePortfolio.projectsKey,
           ),
-          // ContactPartScreen(
-          //   globalKey: HandlePortfolio.contactKey,
-          // ),
+          ContactPartScreen(
+            globalKey: HandlePortfolio.contactKey,
+          ),
+          CopyRightScreen(),
         ],
       ),
     );

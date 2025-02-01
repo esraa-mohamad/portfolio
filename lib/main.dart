@@ -6,7 +6,7 @@ import 'core/routes/app_routing.dart';
 void main() {
 
   runApp( DevicePreview(
-    enabled: true,
+    enabled: false,
     builder: (context) {
       return PortfolioApp(appRouting: AppRouting(),);
     }

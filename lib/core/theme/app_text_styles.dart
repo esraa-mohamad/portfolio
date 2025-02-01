@@ -3,7 +3,7 @@ import 'package:portfolio/core/theme/app_color.dart';
 import 'package:portfolio/core/theme/font_weight_helper.dart';
 
 class AppTextStyles {
-  static TextStyle font22BlackBold(BuildContext context) {
+  static TextStyle font22BlackBold( context) {
     return TextStyle(
       fontSize: getResponsiveFontSize(context, baseFontSize: 22),
       fontWeight: FontWeightHelper.bold,
@@ -11,7 +11,7 @@ class AppTextStyles {
     );
   }
 
-  static TextStyle font14PhilippineGrayRegular(BuildContext context) {
+  static TextStyle font14PhilippineGrayRegular( context) {
     return TextStyle(
       fontSize: getResponsiveFontSize(context, baseFontSize: 14),
       fontWeight: FontWeightHelper.regular,
@@ -19,7 +19,7 @@ class AppTextStyles {
     );
   }
 
-  static TextStyle font35Black38Bold(BuildContext context) {
+  static TextStyle font35Black38Bold( context) {
     return TextStyle(
       fontSize: getResponsiveFontSize(context, baseFontSize: 35),
       fontWeight: FontWeightHelper.bold,
@@ -27,7 +27,7 @@ class AppTextStyles {
     );
   }
 
-  static TextStyle font20BlackSemiBold(BuildContext context) {
+  static TextStyle font20BlackSemiBold( context) {
     return TextStyle(
       fontSize: getResponsiveFontSize(context, baseFontSize: 20),
       fontWeight: FontWeightHelper.semiBold,
@@ -115,12 +115,6 @@ class AppTextStyles {
     );
   }
 
-  static TextStyle font12LightGreyMedium = TextStyle(
-    fontSize: 12,
-    fontWeight: FontWeightHelper.medium,
-    color: Colors.grey[400],
-  );
-
   static TextStyle font30BleuDeFranceBold(context) {
     return TextStyle(
       fontSize: getResponsiveFontSize(context, baseFontSize: 30),
@@ -137,12 +131,6 @@ class AppTextStyles {
     );
   }
 
-  static TextStyle font14GreyMedium = const TextStyle(
-    fontSize: 14,
-    fontWeight: FontWeightHelper.medium,
-    color: Colors.grey,
-  );
-
   static TextStyle font16BrandeisBlueMedium(context) {
     return TextStyle(
       fontSize: getResponsiveFontSize(context, baseFontSize: 16),
@@ -151,9 +139,10 @@ class AppTextStyles {
     );
   }
 
-  static TextStyle font16WhiteSemiBold(context) {
+
+  static TextStyle font22WhiteSemiBold(context) {
     return TextStyle(
-      fontSize: getResponsiveFontSize(context, baseFontSize: 16),
+      fontSize: getResponsiveFontSize(context, baseFontSize: 22),
       fontWeight: FontWeightHelper.semiBold,
       color: AppColor.white,
     );
@@ -237,17 +226,13 @@ class AppTextStyles {
       color: Colors.black,
     );
   }
-  static TextStyle font40WhiteBold = const TextStyle(
-    fontSize: 40,
-    fontWeight: FontWeightHelper.bold,
-    color: Colors.white,
-  );
-
-  static TextStyle font30WhiteBold = const TextStyle(
-    fontSize: 30,
-    fontWeight: FontWeightHelper.bold,
-    color: Colors.white,
-  );
+  static TextStyle font40WhiteBold(context){
+    return  TextStyle(
+      fontSize: getResponsiveFontSize(context, baseFontSize: 40),
+      fontWeight: FontWeightHelper.bold,
+      color: Colors.white,
+    );
+  }
 }
 
 double getResponsiveFontSize(BuildContext context,
