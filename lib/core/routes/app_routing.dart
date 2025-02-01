@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/core/models/project_data_model.dart';
-import 'package:portfolio/features/portfolio/ui/portfolio_all_screen.dart';
 import 'package:portfolio/features/projects/screen/project_details_screen/ui/project_details_screen.dart';
 
+import '../../features/portfolio/presentation/screen/ui/portfolio_all_screen.dart';
 import 'routes.dart';
 
 class AppRouting {

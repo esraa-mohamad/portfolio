@@ -10,7 +10,7 @@ class ProjectTitle extends StatelessWidget {
     return Center(
       child: Text(
         'My Projects' ,
-        style: AppTextStyles.font30LightBlueBold.copyWith(
+        style: AppTextStyles.font30BleuDeFranceBold(context).copyWith(
           fontFamily: FontFamilyHelper.dynaPuffFont
         ),
       ),

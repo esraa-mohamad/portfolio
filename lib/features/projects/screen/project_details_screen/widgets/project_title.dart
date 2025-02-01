@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:lottie/lottie.dart';
 import 'package:portfolio/core/helper/app_lottie.dart';
+import 'package:portfolio/core/helper/spacing.dart';
 import 'package:portfolio/core/models/project_data_model.dart';
 import 'package:portfolio/core/theme/app_color.dart';
 import 'package:portfolio/core/theme/app_text_styles.dart';
@@ -16,9 +18,10 @@ class ProjectTitle extends StatelessWidget {
     return Container(
       width: double.infinity,
       padding: EdgeInsets.symmetric(
-          horizontal: MediaQuery.of(context).size.width * 0.03,
-          vertical: MediaQuery.of(context).size.height * 0.05),
-      color: Colors.white,
+          horizontal: 70.w,
+          vertical: 50.h ,
+      ),
+      color: AppColor.white,
       child: Column(
         children: [
           Align(
@@ -28,46 +31,41 @@ class ProjectTitle extends StatelessWidget {
                 Navigator.of(context).pop();
               },
               child: Container(
-                padding: const EdgeInsets.symmetric(
-                  horizontal: 15,
-                  vertical: 15,
+                padding:  EdgeInsets.symmetric(
+                  horizontal: 15.w,
+                  vertical: 15.h,
                 ),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(50),
                   border: Border.all(
-                    color: AppColor.mainBlue,
+                    color: AppColor.brandeisBlue,
                     width: 2,
                   ),
                 ),
-                child: const Icon(
+                child:  Icon(
                   Icons.close,
-                  size: 30,
-                  color: AppColor.mainBlue,
+                  size: 30.sp,
+                  color: AppColor.brandeisBlue,
                 ),
               ),
             ),
           ),
-          SizedBox(
-            height: MediaQuery.of(context).size.height * 0.18,
-          ),
+         verticalSpace(120),
           Center(
             child: Text(
               projectDataModel.title,
               textAlign: TextAlign.center,
               maxLines: 2,
-              style: AppTextStyles.font50BlueBold
+              style: AppTextStyles.font50BlueBold(context)
                   .copyWith(fontFamily: FontFamilyHelper.caveatFont),
             ),
           ),
-          SizedBox(
-            height: MediaQuery.of(context).size.height * 0.25,
-          ),
+          verticalSpace(120),
           Align(
             alignment: AlignmentDirectional.bottomEnd,
             child: Lottie.asset(
               AppLottie.mouse,
-              width: MediaQuery.of(context).size.width * 0.1,
-              height: MediaQuery.of(context).size.height * 0.2,
+              height: 250.h
             ),
           ),
         ],

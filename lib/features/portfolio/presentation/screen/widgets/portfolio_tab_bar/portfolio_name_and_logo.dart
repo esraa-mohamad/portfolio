@@ -9,29 +9,35 @@ class PortfolioNameAndLogo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Text(
               'Esraa Mohamed',
-              style: AppTextStyles.font22BlackBold
+              style: AppTextStyles.font22BlackBold(context)
                   .copyWith(fontFamily: FontFamilyHelper.dynaPuffFont),
             ),
             Text(
               'Flutter Developer',
-              style: AppTextStyles.font10GreyRegular
+              style: AppTextStyles.font14PhilippineGrayRegular(context)
                   .copyWith(fontFamily: FontFamilyHelper.poppinsFont),
             ),
           ],
         ),
         Text(
           '  |',
-          style: AppTextStyles.font35LightBlackBold,
+          style: AppTextStyles.font35Black38Bold(context),
         ),
-        Image.asset(
-          AppImages.womanCodeLogo,
-          height: MediaQuery.of(context).size.height /7,
-          width: MediaQuery.of(context).size.width /15,
+        FittedBox(
+          fit: BoxFit.scaleDown,
+          child: Image.asset(
+            AppImages.womanCodeLogo,
+            height: 120,
+            width: 120,
+          ),
         )
       ],
     );

@@ -1,47 +1,31 @@
 import 'package:flutter/material.dart';
-import 'package:lottie/lottie.dart';
-import 'package:portfolio/core/helper/app_lottie.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:portfolio/core/theme/app_color.dart';
-import 'package:portfolio/core/theme/app_text_styles.dart';
-import 'package:portfolio/core/theme/font_family_helper.dart';
-import 'package:portfolio/features/contact/screen/widgets/contact_info.dart';
+import 'package:portfolio/core/widgets/adaptive_layout.dart';
+import 'package:portfolio/features/contact/screen/widgets/contact_desktop.dart';
+import 'package:portfolio/features/contact/screen/widgets/contact_mobile.dart';
 
 class ContactPartScreen extends StatelessWidget {
   const ContactPartScreen({super.key, required this.globalKey});
-  final GlobalKey  globalKey;
+
+  final GlobalKey globalKey;
 
   @override
   Widget build(BuildContext context) {
+    var width  =  MediaQuery.sizeOf(context).width;
     return Container(
       key: globalKey,
       width: double.infinity,
       padding: EdgeInsets.symmetric(
-        horizontal: MediaQuery.of(context).size.width *0.02,
-        vertical: MediaQuery.of(context).size.height *0.02,
+        vertical:  width<700 ? 50.h : 20.h,
+        horizontal:20.w ,
       ),
-      color: AppColor.mainBlue,
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          Text('Let\'s Work Together\nI\'m available for freelancing' ,
-          style: AppTextStyles.font40WhiteBold.copyWith(
-            fontFamily: FontFamilyHelper.caveatFont
-          ),
-          ),
-          // SizedBox(
-          //   width: MediaQuery.of(context).size.width *0.03,
-          // ),
-          Lottie.asset(
-              AppLottie.arrowRight ,
-            width: MediaQuery.of(context).size.width *0.1,
-            height: MediaQuery.of(context).size.height *0.08
-          ),
-          // SizedBox(
-          //   width: MediaQuery.of(context).size.width *0.03,
-          // ),
-          const ContactInfo(),
-        ],
-      )
+      color: AppColor.lightGray,
+      child: AdaptiveLayout(
+        mobileLayout: (context)=>  ContactMobile(),
+        tabletLayout: (context)=>  ContactDesktop(),
+        desktopLayout: (context)=>  ContactDesktop(),
+      ),
     );
   }
 }
